@@ -95,6 +95,18 @@ let unRegex = /.un/; // Returns ["fun"]
 // let result = quoteSample.match(myRegex);
 // console.log(result);
 
+//! Match characters that appear 0 or more times
+let soccerWord = "Gooooooal."
+let gPhrase = "gut feeling";
+let oPhrase = "over the moon"
 
+let sRegex = /go*/ig; //* Means find instances of g or go...
+console.log(soccerWord.match(sRegex));
+console.log(gPhrase.match(sRegex));
+console.log(oPhrase.match(sRegex));
+
+let chewieQuote = "Aaaaaaaaaaargh!";
+let chewieRegex = /Aa*/ig
+console.log(chewieQuote.match(chewieRegex));
 
 
