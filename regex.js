@@ -49,5 +49,18 @@ let starRegex = /twinkle/ig; //* you can combine flags for different results
 let result = twinkleStar.match(starRegex); //* match lets you return the value when true and null
 console.log(result);
 
+//! Match anthing with wildcard period 
+//* The period in regex can stand for anything
+let humStr = "I'll hum a song";
+let hugStr = "Bear hug";
+let huRegex = /hu./; //* Will match any word that starts with 'hu_', 
+humStr.match(huRegex); // Returns ["hum"]
+hugStr.match(huRegex); // Returns ["hug"]
+
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /.un/; // Returns ["fun"]
+let result = unRegex.test(exampleStr); // Returns true
+
+
 
 
