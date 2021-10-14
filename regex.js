@@ -27,9 +27,14 @@ let petRegex = /dog|cat|bird|fish/;
 // console.log(result);
 
 //! Using the 'i' flag to ignore case 
-let myString = "freeCodeCamp";
-let fccRegex = /freecodecamp/i;
-let result = fccRegex.test(myString);
-console.log(result);
+// let myString = "freeCodeCamp";
+// let fccRegex = /freecodecamp/i;
+// let result = fccRegex.test(myString);
+// console.log(result);
 
+//! Returning the match value
+let myString = "freeCodeCamp";
+let fccRegex = /freeCodeCamp/;
+let result = myString.match(fccRegex); //* match lets you return the value when true and null when no match is found
+console.log(result);
 
