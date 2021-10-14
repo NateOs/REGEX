@@ -4,7 +4,7 @@ let sentence = "The dog chased the cat.";
 let regex = /the/
 
 // let myString = "Hello, World!";
-let myRegex = /Hello/;
+// let myRegex = /Hello/;
 // let result = myRegex.test(myString); //* This means check if 'myRegex' matches anything in 'myString'
 
 // console.log(result); // returns true
@@ -76,12 +76,24 @@ let unRegex = /.un/; // Returns ["fun"]
 // console.log(result);
 
 //! Match both letters of the alphabet and numbers
-let quoteSample = "The quick brown fox jumped over the lazy dog 12 11 0 1 2 3 4 5 6 7 8 9 10 11";
+// let quoteSample = "The quick brown fox jumped over the lazy dog 12 11 0 1 2 3 4 5 6 7 8 9 10 11";
 //* this will match all letters of the alphabet 
 //* and numbers between the specified ranges, non -case sensitive
-let alphabetRegex = /[0-9A-Z]/ig; 
-let result = quoteSample.match(alphabetRegex)
-console.log(result);
+// let alphabetRegex = /[0-9A-Z]/ig; 
+// let result = quoteSample.match(alphabetRegex)
+// console.log(result);
+
+// //! Match single characters not specified
+// let quoteSample = "3 blind mice."
+// let myRegex = /[^0-9aeiou]/ig // ^ means negate the matches, return others instead.
+// let result = quoteSample.match(myRegex);
+// console.log(result);
+
+//! Match characters that appear more than once
+// let quoteSample = "3 blind mice Mississippi."
+// let myRegex = /s+/ig // ^ means negate the matches, return others instead.
+// let result = quoteSample.match(myRegex);
+// console.log(result);
 
 
 
