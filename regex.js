@@ -46,8 +46,8 @@ let ourRegex = /Repeat/g; //* the g flag here means find every instance of the s
 
 let twinkleStar = "Twinkle, twinkle, little star";
 let starRegex = /twinkle/ig; //* you can combine flags for different results
-let result = twinkleStar.match(starRegex); //* match lets you return the value when true and null
-console.log(result);
+// let result = twinkleStar.match(starRegex); //* match lets you return the value when true and null
+// console.log(result);/
 
 //! Match anthing with wildcard period 
 //* The period in regex can stand for anything
@@ -59,7 +59,15 @@ hugStr.match(huRegex); // Returns ["hug"]
 
 let exampleStr = "Let's have fun with regular expressions!";
 let unRegex = /.un/; // Returns ["fun"]
-let result = unRegex.test(exampleStr); // Returns true
+// let result = unRegex.test(exampleStr); // Returns true
+// console.log(result);
+
+//! Match single character with multiple possibilities
+let bgRegex = /b[aiu]g/; //* this will match bug, big and bug
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct";
+let vowelRegex = /[aieou]/ig; //* this will match every instance of vowels, non-case sensitive
+let result = quoteSample.match(bgRegex)
+console.log(result);
 
 
 
