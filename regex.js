@@ -63,10 +63,16 @@ let unRegex = /.un/; // Returns ["fun"]
 // console.log(result);
 
 //! Match single character with multiple possibilities
-let bgRegex = /b[aiu]g/; //* this will match bug, big and bug
-let quoteSample = "Beware of bugs in the above code; I have only proved it correct";
-let vowelRegex = /[aieou]/ig; //* this will match every instance of vowels, non-case sensitive
-let result = quoteSample.match(bgRegex)
+// let bgRegex = /b[aiu]g/; //* this will match bug, big and bug
+// let quoteSample = "Beware of bugs in the above code; I have only proved it correct";
+// let vowelRegex = /[aieou]/ig; //* this will match every instance of vowels, non-case sensitive
+// let result = quoteSample.match(bgRegex)
+// console.log(result);
+
+//! Match letterrs of the alphabet
+let quoteSample = "The quick brown fox jumped over the lazy dog";
+let alphabetRegex = /[a-z]/ig; //* this will match all letters of the alphabet, non-case sensitive
+let result = quoteSample.match(alphabetRegex)
 console.log(result);
 
 
