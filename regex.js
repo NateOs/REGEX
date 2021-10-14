@@ -14,5 +14,15 @@ let waldoRegex = /Waldo/;
 
 //* This means check id waldoRegex matches anything in 'waldoIsHiding',
 //* however the '/ /' combination is case sensitive
-let result = waldoRegex.test(waldoIsHiding);
-console.log(result);
+// let result = waldoRegex.test(waldoIsHiding);
+// console.log(result);
+
+//! Match a literal string with different possibilities
+let petString = "James has  a pet cat.";
+let petRegex = /dog|cat|bird|fish/;
+let result = petRegex.test(petString);
+
+//* returns true because 'cat' is a match, will also return true if dog
+//* was a match or any of the other strings in the regex with the '|' sign.
+console.log(result); 
+
