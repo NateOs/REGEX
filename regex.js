@@ -69,9 +69,17 @@ let unRegex = /.un/; // Returns ["fun"]
 // let result = quoteSample.match(bgRegex)
 // console.log(result);
 
-//! Match letterrs of the alphabet
-let quoteSample = "The quick brown fox jumped over the lazy dog";
-let alphabetRegex = /[a-z]/ig; //* this will match all letters of the alphabet, non-case sensitive
+// //! Match letters of the alphabet
+// let quoteSample = "The quick brown fox jumped over the lazy dog";
+// let alphabetRegex = /[a-z]/ig; //* this will match all letters of the alphabet, non-case sensitive
+// let result = quoteSample.match(alphabetRegex)
+// console.log(result);
+
+//! Match both letters of the alphabet and numbers
+let quoteSample = "The quick brown fox jumped over the lazy dog 12 11 0 1 2 3 4 5 6 7 8 9 10 11";
+//* this will match all letters of the alphabet 
+//* and numbers between the specified ranges, non -case sensitive
+let alphabetRegex = /[0-9A-Z]/ig; 
 let result = quoteSample.match(alphabetRegex)
 console.log(result);
 
