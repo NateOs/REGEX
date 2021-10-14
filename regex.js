@@ -35,6 +35,19 @@ let petRegex = /dog|cat|bird|fish/;
 //! Returning the match value
 let myString = "freeCodeCamp";
 let fccRegex = /freeCodeCamp/;
-let result = myString.match(fccRegex); //* match lets you return the value when true and null when no match is found
+// let result = myString.match(fccRegex); //* match lets you return the value when true and null when no match is found
+// console.log(result);
+
+//! Find more than the first match with the 'g' flag
+let testStr = "Repeat, Repeat, Repeat"
+let ourRegex = /Repeat/g; //* the g flag here means find every instance of the string arg
+// let result = testStr.match(ourRegex);
+// console.log(result);
+
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /twinkle/ig; //* you can combine flags for different results
+let result = twinkleStar.match(starRegex); //* match lets you return the value when true and null
 console.log(result);
+
+
 
