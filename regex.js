@@ -1,7 +1,7 @@
 //* Regex is used in programming to match patterns in strings
 
 let sentence = "The dog chased the cat.";
-let regex = /the/
+// let regex = /the/
 
 // let myString = "Hello, World!";
 // let myRegex = /Hello/;
@@ -14,8 +14,8 @@ let waldoRegex = /Waldo/;
 
 //* This means check id waldoRegex matches anything in 'waldoIsHiding',
 //* however the '/ /' combination is case sensitive
-// let result = waldoRegex.test(waldoIsHiding);
-// console.log(result);
+// let result = waldoRegex.test(waldoIsHiding); //returns true
+
 
 //! Match a literal string with different possibilities
 let petString = "James has  a pet cat.";
@@ -96,17 +96,28 @@ let unRegex = /.un/; // Returns ["fun"]
 // console.log(result);
 
 //! Match characters that appear 0 or more times
-let soccerWord = "Gooooooal."
-let gPhrase = "gut feeling";
-let oPhrase = "over the moon"
+// let soccerWord = "Gooooooal."
+// let gPhrase = "gut feeling";
+// let oPhrase = "over the moon"
 
-let sRegex = /go*/ig; //* Means find instances of g or go...
-console.log(soccerWord.match(sRegex));
-console.log(gPhrase.match(sRegex));
-console.log(oPhrase.match(sRegex));
+// let sRegex = /go*/ig; //* Means find instances of g if !found go...
+// console.log(soccerWord.match(sRegex)); // returns Goooooo
+// console.log(gPhrase.match(sRegex)); // returns g
+// console.log(oPhrase.match(sRegex)); // null
 
 let chewieQuote = "Aaaaaaaaaaargh!";
 let chewieRegex = /Aa*/ig
-console.log(chewieQuote.match(chewieRegex));
+// console.log(chewieQuote.match(chewieRegex)); // returns "Aaaaaaa"
 
+//! Find characters with lazy/greedy matching
+// let string = "titanic";
+// // returns 'ti' with the '?' which means lazy matching and
+// // 'titani' without, which is greedy matching
+// let regex = /t[a-z]*?i/; 
+// console.log(string.match(regex)); 
+
+// let text = "<h1>Winter is coming</h1>"
+// let myRegex = /<.*?>/
+// let result = text.match(myRegex);
+// console.log(result);
 
