@@ -121,3 +121,16 @@ let chewieRegex = /Aa*/ig
 // let result = text.match(myRegex);
 // console.log(result);
 
+//! Quick Test, find one or more of a character
+let crowd = 'P1P2P3P4P5P6CCCP7P8P9';
+let reCriminals = /C+/;
+let matchedCriminals = crowd.match(reCriminals);
+// console.log(matchedCriminals); // returns the 3 Cs
+
+//! Match beginning string patterns
+let rickyAndCal = "Cal and Ricky both like racing."
+let calRegex = /^Cal/;
+let result = calRegex.test(rickyAndCal);
+// console.log(result); // returns TRUE, using ^before chars returns a match thats at the start of the string
+
+//! 
