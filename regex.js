@@ -167,5 +167,4 @@ console.log(userCheck.test(username));
 let sample = "Whitespace is important in separating words.";
 let countWhiteSpace = /\s/g; // using uppercase S returns non-whitespace chars instead
 console.log(sample.match(countWhiteSpace)); // returns all white space chars
-let userCheck = /^[a-zA-Z]{2,}\d*/g; // this regex passes the conditions above, {2,}, this means minimum of two, will have no pair if max is not specified
-console.log(userCheck.test(username));
+
