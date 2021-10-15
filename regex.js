@@ -130,17 +130,24 @@ let matchedCriminals = crowd.match(reCriminals);
 //! Match beginning string patterns
 let rickyAndCal = "Cal and Ricky both like racing."
 let calRegex = /^Cal/;
-let result = calRegex.test(rickyAndCal);
+// let result = calRegex.test(rickyAndCal);
 // console.log(result); // returns TRUE, using ^before chars returns a match thats at the start of the string
 
 //! Match ending string patterns
 let caboose = "The last car on a train is the caboose"
 let lastRegex = /caboose$/;
-console.log(lastRegex.test(caboose)) //retuns true because caboose is indeed at the end of the strings
+// console.log(lastRegex.test(caboose)) //retuns true because caboose is indeed at the end of the strings
 
 //! Match all letters and numbers
 let quoteSample = "The five boxing wizards jump quickly"
 let alphabetRegexV2 = /\w/g; // \w is a shorthand character class that will match [a-z][0-9] and _
 //! Match none letters and numbers, to match this use Uppercase W which will return the opposite of the above
 
-console.log(quoteSample.match(alphabetRegexV2).length); //returns 31 for the lenth of chars 
+// console.log(quoteSample.match(alphabetRegexV2).length); //returns 31 for the lenth of chars 
+
+//! Match all numbers
+let numString = "Your sandwich will be $5.00";
+let numRegex = /\d/g;
+let result = numString.match(numRegex);
+console.log(result) // returns 3 as the number of numbers found
+
