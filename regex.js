@@ -139,4 +139,8 @@ let lastRegex = /caboose$/;
 console.log(lastRegex.test(caboose)) //retuns true because caboose is indeed at the end of the strings
 
 //! Match all letters and numbers
+let quoteSample = "The five boxing wizards jump quickly"
+let alphabetRegexV2 = /\w/g; // \w is a shorthand character class that will match [a-z][0-9] and _
+//! Match none letters and numbers, to match this use Uppercase W which will return the opposite of the above
 
+console.log(quoteSample.match(alphabetRegexV2).length); //returns 31 for the lenth of chars 
