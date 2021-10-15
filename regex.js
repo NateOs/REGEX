@@ -133,4 +133,10 @@ let calRegex = /^Cal/;
 let result = calRegex.test(rickyAndCal);
 // console.log(result); // returns TRUE, using ^before chars returns a match thats at the start of the string
 
-//! 
+//! Match ending string patterns
+let caboose = "The last car on a train is the caboose"
+let lastRegex = /caboose$/;
+console.log(lastRegex.test(caboose)) //retuns true because caboose is indeed at the end of the strings
+
+//! Match all letters and numbers
+
