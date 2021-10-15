@@ -147,7 +147,18 @@ let alphabetRegexV2 = /\w/g; // \w is a shorthand character class that will matc
 
 //! Match all numbers
 let numString = "Your sandwich will be $5.00";
-let numRegex = /\d/g;
-let result = numString.match(numRegex);
-console.log(result) // returns 3 as the number of numbers found
+let numRegex = /\d/g; // replacing 'd' with D returns all non-number characters instead
+// let result = numString.match(numRegex);
+// console.log(result) // returns 3 as the number of numbers found
 
+//!Quick Test
+//*  Validating a username
+/* 
+   1. If there are numbers, they must be at the end.
+   2. Letters can be lowercase and uppercase.
+   3. Atleast two characters long. Two-letter names can't have numbers.
+*/
+
+let username = "JackOfAllTrades";
+let userCheck = /^[a-zA-Z]{2,}\d*/g; // this regex passes the conditions above, {2,}, this means minimum of two, will have no pair if max is not specified
+console.log(userCheck.test(username));
