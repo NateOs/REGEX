@@ -202,4 +202,21 @@ repeatStr.match(repeatRegex) // Returns "regex regex, regex"
 
 let repeatNum = "42 42 42";
 let reRegex = /(^\d+)\s\1\s\1$/; // means: any group of three numbers
-console.log(reRegex.test(repeatNum));
+// console.log(reRegex.test(repeatNum));
+
+//! Use capture groups to search and replace 
+// let wrongText = "The sky is silver.";
+// let silverRegex = /silver/
+// wrongText.replace(silverRegex, "blue") // Returns 'the sky is blue'
+
+// "Code Camp".replace(/(\w+)\s(\w+))/, '$2 $1'); // returns Camp Code as $2 means 2nd capture group and $1 for first capture group
+
+// let huhText = "This sandwich is good."
+// let fixRegex = /good/
+// let replaceText = "okey-dokey"
+// let result = huhText.replace(fixRegex, replaceText) // returns "This sandwich is okey-dokey"
+
+//! Remove whitespace before and after text
+let spacedString = '  some text   '
+let removeWSRegex = /^\s+|\s+$/g
+console.log(spacedString.replace(removeWSRegex, ''))
