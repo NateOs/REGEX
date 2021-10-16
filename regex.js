@@ -193,3 +193,13 @@ noquit.match(qRegex);
 
 let sampleWord = "astronaut";
 let pwRegex = /(?=\w{5})(?=\D*\d{2})/; // this is going to match for 5 or more chars (?=\w{5}); and 2 more digits (?=\D*\d{2})
+
+//! Reuse patterns using capture groups
+let repeatStr = "regex regex";
+let repeatRegex = /(\w+)\s\1/; // means: any number of characters capture group, whitespace, repeat capture group.
+repeatRegex.test(repeatStr); // Returns true
+repeatStr.match(repeatRegex) // Returns "regex regex, regex"
+
+let repeatNum = "42 42 42";
+let reRegex = /(^\d+)\s\1\s\1$/; // means: any group of three numbers
+console.log(reRegex.test(repeatNum));
