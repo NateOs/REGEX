@@ -161,10 +161,14 @@ let numRegex = /\d/g; // replacing 'd' with D returns all non-number characters 
 
 let username = "JackOfAllTrades";
 let userCheck = /^[a-zA-Z]{2,}\d*$/g; // this regex passes the conditions above, {2,}, this means minimum of two, will have no pair if max is not specified
-console.log(userCheck.test(username));
+// console.log(userCheck.test(username));
 
 //! Match whitespace
 let sample = "Whitespace is important in separating words.";
 let countWhiteSpace = /\s/g; // using uppercase S returns non-whitespace chars instead
-console.log(sample.match(countWhiteSpace)); // returns all white space chars
+// console.log(sample.match(countWhiteSpace)); // returns all white space chars
 
+//! Specify Upper and Lower number of matches
+let ohStr = "Ohhh no";
+let ohRgex = /Oh{3} no/; //{3,} means match 3 or specified number of 'h', an upper bound and a lower bound of h characters.
+console.log(ohRgex.test(ohStr))
