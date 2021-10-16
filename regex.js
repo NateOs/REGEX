@@ -171,9 +171,14 @@ let countWhiteSpace = /\s/g; // using uppercase S returns non-whitespace chars i
 //! Specify Upper and Lower number of matches
 let ohStr = "Ohhh no";
 let ohRgex = /Oh{3,} no/; //{3,} means match 3 or specified number of 'h', an upper bound and a lower bound of h characters.
-console.log(ohRgex.test(ohStr))
+// console.log(ohRgex.test(ohStr))
 
 //! Specify exact number of matches
 let timStr = "Hazzzzah"
-let timRegex = /Haz{4}/; //Without the comma, this means match exactly 'Ha', followed by 4z
-let result = haRegex.test(haStr)
+let timRegex = /Haz{4}/; // Without the comma, this means match exactly 'Ha', followed by 4z
+let result = timRegex.test(timStr)
+
+//! Check for All or None
+let favWord = "favorite"
+let favRegex = /favou?rite/; // '?' conditionally checks if u exists or not and matches both 'favourite' and 'favorite'
+console.log(favRegex.test(favWord))
