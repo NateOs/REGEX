@@ -181,4 +181,15 @@ let result = timRegex.test(timStr)
 //! Check for All or None
 let favWord = "favorite"
 let favRegex = /favou?rite/; // '?' conditionally checks if u exists or not and matches both 'favourite' and 'favorite'
-console.log(favRegex.test(favWord))
+// console.log(favRegex.test(favWord))
+
+//! Positive and Negative Lookahead
+let quit = "qu";
+let noquit = 'qt';
+let quRegex = /q(?=u)/;
+let qRegex = /q(?!u)/;
+quit.match(quRegex);
+noquit.match(qRegex);
+
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{5})(?=\D*\d{2})/; // this is going to match for 5 or more chars (?=\w{5}); and 2 more digits (?=\D*\d{2})
